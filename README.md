@@ -14,7 +14,7 @@ Example usage:
 
 This will deploy an app with the index tag set to something like `2.1.3+ddaa74d`.
 
-[git-repo-info]: https://github.com/rjwblue/git-repo-info
+[git-repo-info]: https://github.com/rwjblue/git-repo-info
 
 ## Installation
 
