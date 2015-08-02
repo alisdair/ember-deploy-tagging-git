@@ -26,8 +26,8 @@ This will deploy an app with the index tag set to something like `2.1.3+ddaa74d`
     // ...
     module.exports = {
       production: {
-        store: { type: 'redis' },
-        asserts: { type: 's3' },
+        store: { type: 'redis' }, // etc.
+        assets: { type: 's3' }, // etc.
         tagging: 'git-tag'
       }
     };
