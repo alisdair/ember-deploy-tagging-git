@@ -1,0 +1,30 @@
+{
+  "name": "ember-deploy-tagging-git",
+  "version": "1.0.0",
+  "description": "Use git-repo-version to tag your ember-deploy versions",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/jshint/bin/jshint lib/ node_tests/ && ./node_modules/mocha/bin/mocha node_tests/**/*-test.js"
+  },
+  "repository": "https://github.com/alisdair/ember-deploy-tagging-git",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Alisdair McDiarmid",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5"
+  },
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "core-object": "0.0.2",
+    "git-repo-version": "^0.3.0"
+  }
+}
