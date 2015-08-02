@@ -2,11 +2,19 @@
 
 [![Build Status](https://travis-ci.org/alisdair/ember-deploy-tagging-git.svg)](https://travis-ci.org/alisdair/ember-deploy-tagging-git)
 
-Uses [git-repo-version][git-repo-version] to tag Ember deploy releases. For example, `1.0.5+165832f5`.
+Uses [git-repo-info][git-repo-info] to tag Ember deploy releases with readable information, like `1.0.5+165832f5`.
 
-This makes the output of `ember deploy:list` much more undertandable than a list of SHA prefixes.
+The tag is `version+sha`, where version is either the git tag (if checked out) or the package.json version, and sha is the first 8 characters of the git commit hash.
 
-[git-repo-version]: https://github.com/cibernox/git-repo-version
+Example usage:
+
+- `git tag 2.1.3`
+- `git checkout 2.1.3`
+- `ember deploy`
+
+This will deploy an app with the index tag set to something like `2.1.3+ddaa74d`.
+
+[git-repo-info]: https://github.com/rjwblue/git-repo-info
 
 ## Installation
 

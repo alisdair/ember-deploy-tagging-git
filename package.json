@@ -1,6 +1,6 @@
 {
   "name": "ember-deploy-tagging-git",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use git-repo-version to tag your ember-deploy versions",
   "directories": {
     "doc": "doc",
@@ -25,6 +25,6 @@
   ],
   "dependencies": {
     "core-object": "0.0.2",
-    "git-repo-version": "^0.3.0"
+    "git-repo-info": "^1.1.2"
   }
 }
