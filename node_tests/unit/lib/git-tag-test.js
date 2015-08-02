@@ -4,7 +4,7 @@ var GitTaggingAdapter = require('../../../lib/git-tag');
 
 describe('git-tag', function() {
   describe('#createTag', function() {
-    it('concatenates manifest and version', function(){
+    it('concatenates manifest and version', function() {
       var subject = new GitTaggingAdapter({
         manifest: 'manifest',
         version: 'version'
@@ -13,7 +13,7 @@ describe('git-tag', function() {
       expect(subject.createTag()).to.equal('manifest:version');
     });
 
-    it('determines version using git-repo-version', function(){
+    it('determines version using git-repo-version', function() {
       var version = require('git-repo-version');
       var subject = new GitTaggingAdapter({
         manifest: 'manifest',
@@ -23,7 +23,7 @@ describe('git-tag', function() {
       expect(subject.createTag()).to.equal('manifest:' + version);
     });
 
-    it('creates tag with a useful format', function(){
+    it('creates tag with a useful format', function() {
       var subject = new GitTaggingAdapter({
         manifest: 'manifest',
       });
@@ -31,6 +31,24 @@ describe('git-tag', function() {
       // Format: manifest, version in form 1.2.3, "+", 8 chars of git hash
       var format = /^manifest:\d+\.\d+\.\d+\+[0-9a-f]{8}$/;
       expect(subject.createTag()).to.match(format);
+    });
+
+    it('throws an error if the version is blank', function(){
+      var subject = new GitTaggingAdapter({
+        manifest: 'manifest',
+        version: ''
+      });
+
+      expect(subject.createTag).to.throw(Error);
+    });
+
+    it('throws an error if the version is undefined', function(){
+      var subject = new GitTaggingAdapter({
+        manifest: 'manifest',
+        version: undefined
+      });
+
+      expect(subject.createTag).to.throw(Error);
     });
   });
 });
