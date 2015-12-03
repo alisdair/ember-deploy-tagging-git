@@ -1,6 +1,7 @@
 # ember-deploy-tagging-git
 
-[![Build Status](https://travis-ci.org/alisdair/ember-deploy-tagging-git.svg)](https://travis-ci.org/alisdair/ember-deploy-tagging-git)
+[![Build Status](https://travis-ci.org/alisdair/ember-deploy-tagging-git.svg)](https://travis-ci.org/alisdair/ember-deploy-tagging-git) [![](https://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/plugins/ember-deploy-tagging-git.svg)](http://ember-cli-deploy.github.io/ember-cli-deploy-version-badges/)
+
 
 Uses [git-repo-info][git-repo-info] to tag Ember deploy releases with readable information, like `1.0.5+165832f5`.
 
